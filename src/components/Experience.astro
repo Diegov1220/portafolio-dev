@@ -1,0 +1,25 @@
+---
+import { Code, Debug } from "astro:components"
+import ExperienceItem from './ExperienceItem.astro'
+const EXPERIENCE=[{
+    title: 'Financiera MI CREDIT PERU S.A.C',
+    date: 'Octubre 2022 - Noviembre 2023',
+    description: 'Alcancé niveles óptimos de satisfacción al cliente, así como también óptimos tiempos de respuesta en cuanto a reclamos y consultas, gracias al bot de WhatsApp que implementé. Agilicé el proceso de guardado y búsqueda de expedientes gracias al CRUD de inventariado de expedientes que desarrollé en angular.',
+    link: '#'
+    },{
+    title: 'ASCENDA',
+    date: 'Mayo 2020 – Agosto 2020',
+    description: 'Mejoré el tiempo de elaboración de la versión final de las paginas web debido a la aceptación anticipada de los prototipos que desarrollé.'
+    }]
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">                  
+    {EXPERIENCE.map(experience=>(
+        <li class="mb-10 ms-4">
+        <ExperienceItem {...experience}></ExperienceItem>
+            </li>
+    ))}
+    
+</ol>
+
