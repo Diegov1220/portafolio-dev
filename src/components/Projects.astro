@@ -6,6 +6,10 @@ import React from "../icons/React.astro"
 import GitHub from "../icons/GitHub.astro"
 import LinkButton from "../components/LinkButton.astro"
 import Link from "../icons/Link.astro"
+import Angular from "../icons/Angular.astro"
+import Graph from "../icons/Graph.astro"
+import Python from "../icons/Python.astro"
+import Tensor from "../icons/Tensor.astro"
 
 const TAGS={
     NEXT:{
@@ -30,26 +34,65 @@ const TAGS={
         class:"bg-[#003159] text-white",
         icon:React
         
+    },
+    ANGULAR:{
+        name:"Angular",
+        class:"bg-[#E04B30] text-white",
+        icon:Angular
+        
+    },
+    GRAPH:{
+        name:"GraphQL",
+        class:"bg-[#8D008F] text-white",
+        icon:Graph
+        
+    },
+    PYTHON:{
+        name:"Python",
+        class:"bg-[#003159] text-white",
+        icon:Python
+        
+    },
+    TENSOR:{
+        name:"TensorFlow",
+        class:"bg-[#C86218] text-white",
+        icon:Tensor
+        
     }
+    
     
 }
 
 const PROJECTS=[
     {
         title: "Ecommerce",
-        description: "Desarrollo de ecommerce, Fronted y Backend para MELATEC",
-        link:"#",
-        github:"#",
-        image:"/projects/ecommerce.png",
+        description: "Desarrollo de ecommerce, Full Stack para la empresa MELATEC",
+        github:"https://github.com/Diegov1220/melatec_react",
+        image:"/projects/ecomerce.png",
         tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.REACT,TAGS.MONGO]
     },
     {
         title: "Landing Page",
-        description: "Desarrollo de landing page, para informacion de la empresa para MELATEC",
+        description: "Desarrollo de landing page, para informacion de la empresa MELATEC",
         link:"https://melatectrux.web.app/",
-        github:"#",
+        github:"https://github.com/Diegov1220/LandingPage-Melatec",
         image:"/projects/landing.png",
         tags: [TAGS.NEXT, TAGS.TAILWIND,TAGS.REACT]
+    },
+    {
+        title: "Clasificacion de imagenes(Delitos)",
+        description: "Construccion de un modelo de clasificacion de imagenes con python y tensorflow para la deteccion de delitos",
+        github:"https://github.com/Diegov1220/Clasificacion-de-imagenes-con-python-y-tensorflow",
+        image:"/projects/CNN.png",
+        tags: [TAGS.PYTHON, TAGS.TENSOR]
+    },
+    {
+        title: "Listado de paises",
+        description: "Desarrollo de un listado de paises con angular y graphql",
+        link:"https://angular2-b8b0d.web.app/",
+        github:"https://github.com/Diegov1220/reto_angular",
+        image:"/projects/listado.png",
+        tags: [TAGS.ANGULAR, TAGS.GRAPH]
     }
 ]
 ---

@@ -1,22 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
-import foto from '../images/FotoCV.jpg'
-import Linkedln from '../icons/Linkedln.astro'
-import Peru from '../icons/Peru.astro'
-import ScocialPill from '../icons/SocialPill.astro'
-import GitHub from '../icons/GitHub.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import BriefSuitCase from '../icons/BriefSuitCase.astro';
 import Projects from '../components/Projects.astro';
 import Hero from '../components/Hero.astro';
+import Code from '../icons/Code.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Profile from '../icons/Profile.astro';
 ---
 
 <Layout title="Portafolio de Diego - Desarrollador y programador con 2 años de experiencia"
 description='Contrata a Diego para crear aplicaciones web. Desarrollador web. Creacion de aplicaciones unicas'>
 	<main class="px-4">
-		<SectionContainer class="py-16 md:py-36">
+		<SectionContainer id="inicio" class="py-16 md:py-36">
 			<Hero>
 			</slot>
 		  </Hero>
@@ -29,10 +26,19 @@ description='Contrata a Diego para crear aplicaciones web. Desarrollador web. Cr
 		</SectionContainer>
 		<SectionContainer id="proyectos" class="py-20">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-				<BriefSuitCase class="size-7"></BriefSuitCase>
-					Proyectos</h2>
+				<Code class="size-7 font-semibold"></Code>
+					Ultimos Proyectos</h2>
 			<Projects></Projects>
 		</SectionContainer>
+		<SectionContainer id="sobre-mi">
+			<h2
+			  class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white"
+			>
+			  <Profile class="size-8" />
+			  Sobre mí
+			</h2>
+			<AboutMe />
+		  </SectionContainer>
 	</main>
 </Layout>
 
